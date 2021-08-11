@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drum kit</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <audio id="bass">
+            <source src="audio/bass.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="cymbal">
+            <source src="audio/cymbal.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="hihat">
+            <source src="audio/hihat.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="medtom">
+            <source src="audio/medtom.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="smalltom">
+            <source src="audio/smalltom.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="snare">
+            <source src="audio/snare.mp3" type="audio/mpeg">
+        </audio>
+        
+
+    <div class="container p-md-4">
+        <div class="row gx-md-4" >
+            <div class="col-md-3 p-md-4 d-flex  flex-md-column justify-content-evenly p-3 bg-img" 
+            style=
+            "background-image: url(/images/bg.jpg);
+            background-size:cover;">
+                <button class="btn btn-lg  btn-info text-white d-md-block  my-md-5 align-self-center"  
+                     onclick="play_music()"> play music
+                </button>
+                <button class="btn btn-lg btn-info text-white d-md-block align-self-center"
+                 onclick="reset_music()"> Reset
+                </button>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <img src = "images/drumset.png" class="img-fluid"/>
+                </div>
+                <div class="row gy-2">
+                    <div class="col-4 col-md-2"><button class="btn-info" id="crash_cymbal" onclick="play_audio(this.id)">
+                        <img src="images/crash.png" class="img-fluid" alt="crash Cymbal"/>
+                        <p class="mb-1 text-white">Crash</p>
+                    </button></div>
+                    <div class=" col-4 col-md-2"><button class="btn-info" id="bass_drum" onclick="play_audio(this.id)">
+                        <img src="images/bass.png" class="img-fluid" alt="bass"/>
+                        <p class="mb-1 text-white">Bass</p>
+                    </button></div>
+                    <div class="col-4 col-md-2"><button class="btn-info" id="snare" onclick="play_audio(this.id)">
+                        <img src="images/snare.png" class="img-fluid" alt="snare"/>
+                        <p class="mb-1 text-white">Snare</p>
+                    </button></div>
+                    <div class="col-4 col-md-2"><button class="btn-info" id ="hi_hits" onclick="play_audio(this.id)"> 
+                        <img  class="img-fluid" src="images/hi hats.png" class="img-fluid" alt="Hi-hats"/>
+                        <p class="mb-1 text-white">Hihats</p>
+                    </button></div>
+                    <div class="col-4 col-md-2"><button class="btn-info" id="tom_med" onclick="play_audio(this.id)">
+                        <img src="images/medtom.png" class="img-fluid" alt="medium tom"/>  
+                        <p class="mb-1 text-white">Tom 1</p>
+                    </button></div>
+                    <div class="col-4 col-md-2"><button class="btn-info" id="tom_small" onclick="play_audio(this.id)">
+                        <img src="images/smalltom.png" class="img-fluid" alt="small tom"/>
+                        <p class="mb-1 text-white">Tom 2</p>
+                     </button></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class= "drumkit">
+     <div class="info">
+        <button  onclick="play_music()"> play music</button>
+        <button  onclick="reset_music()"> Reset</button>
+     </div>
+     <div class="drum_section">
+        <div class="drum_img">
+           
+        </div>
+        <div class="drum_parts">
+            <button id="crash_cymbal" onclick="play_audio(this.id)">
+                <img src="images/crash.png" alt="crash Cymbal" style="width:fit-content;"/>
+                <p>Crash Cymbal</p>
+            </button>
+            <button id="bass_drum" onclick="play_audio(this.id)">
+                <img src="images/bass.png" alt="bass"/>
+                <p>Bass</p>
+            </button>
+            <button id="snare" onclick="play_audio(this.id)">
+                <img src="images/snare.png" alt="snare"/>
+                <p>Snare</p>
+            </button>
+            <button id ="hi_hits" onclick="play_audio(this.id)"> 
+                <img  src="images/hi hats.png" alt="Hi-hats"/>
+                <p>Hi-hats</p>
+            </button>
+            <button id="tom_med" onclick="play_audio(this.id)">
+                <img src="images/medtom.png" alt="medium tom"/>  
+                <p>Med. Tom</p>
+            </button>
+            <button id="tom_small" onclick="play_audio(this.id)">
+               <img src="images/smalltom.png" alt="small tom"/>
+               <p>small tom</p>
+            </button>
+
+                
+            </div>
+        </div>
+
+    </div> -->
+    <script src="app.js"></script>
+</body>
+
+</html>
